@@ -5,7 +5,7 @@ const { buildSchema } = require('graphql');
 
 const app = express();
 
-const Port = process.env.Port || 5000;
+const Port = process.env.Port || 8080;
 
 // GraphQL schema
 const schema = buildSchema(`
@@ -16,7 +16,7 @@ const schema = buildSchema(`
 
 //Root resolver
 const root = {
-  message: () => 'Welcome to graphql and express server',
+  message: () => 'Welcome to GraphQL server with Nodejs and Express',
 };
 
 app.use(
